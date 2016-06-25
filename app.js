@@ -14,8 +14,9 @@ var express         = require("express"),
 var commentRoutes        = require("./routes/comments"),
     campgroundRoutes     = require("./routes/campgrounds"),
     indexRoutes          = require("./routes/index");
-    
-mongoose.connect(process.env.DATABASEURL);
+
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_11";    
+mongoose.connect(url);
 //mongoose.connect("mongodb://Michael:dongXi88@ds023694.mlab.com:23694/hellstromyelpcamp");
 // mongodb://Michael:dongXi88@ds023694.mlab.com:23694/hellstromyelpcamp
 
